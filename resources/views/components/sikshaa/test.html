@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       <!-- Add this CSS to make the carousel full screen -->
+       <style>
+        .banner-search {
+            position: relative;
+            height: 100vh;
+        }
+        .carousel-inner {
+            height: 100%;
+        }
+        .carousel-item img {
+            object-fit: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="banner-search py-4">
+        <div class="container-fluid p-0">
+            <div class="row flex-lg-row-reverse align-items-center">
+                <div class="col-12 col-lg-6">
+                    <!-- Add content if needed inside this column -->
+                </div>
+                <div class="col-12">
+                    <!-- Full-Screen Slider -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/1920x1080" class="d-block w-100" alt="Third slide">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+    
+    
+</body>
+</html>

@@ -59,6 +59,8 @@ class LayoutsController extends Controller
 
     public function welcome(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
+
+//        dd(1);
         $faqs = Question::orderBy('id', 'desc')->get();
         $sliders = Slider::orderBy('id', 'desc')->get();
         $about = About::first();

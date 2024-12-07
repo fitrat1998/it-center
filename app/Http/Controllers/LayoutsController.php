@@ -64,10 +64,9 @@ class LayoutsController extends Controller
         $faqs = Question::orderBy('id', 'desc')->get();
         $sliders = Slider::orderBy('id', 'desc')->get();
         $about = About::first();
-        $online = Course::where('type','online')->get();
-        $offline = Course::where('type','offline')->get();
+        $courses = Course::all();
         $news = News::orderBy('id', 'desc')->skip(0)->take(4)->get();
-	return view('welcome',compact('sliders','about','news','online','offline','faqs'));
+	return view('welcome',compact('sliders','about','news','courses','faqs'));
     }
 
     public function lang($lang)

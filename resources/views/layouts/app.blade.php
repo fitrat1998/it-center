@@ -23,7 +23,8 @@
     <!-- Bootstrap Icons -->
     <link href="{{ asset('assets/vendor/bootstrap-icons/font/bootstrap-icons.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity=""
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 
     <style>
@@ -63,7 +64,7 @@
             /* filter: blur(1px); */
         }
 
-          /* Navbar Background */
+        /* Navbar Background */
         .custom-navbar {
             background-color: #004a9f;
             padding: 10px 20px;
@@ -74,7 +75,7 @@
         .navbar .nav-link {
             color: #ffffff;
             font-size: 16px;
-            padding: 16px!important;
+            padding: 16px !important;
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
         }
@@ -82,8 +83,8 @@
         /* Hover Effect on Links */
         .navbar .nav-link:hover {
             background-color: #004a9f;
-            padding: 12px!important;
-            color: #fff!important;
+            padding: 12px !important;
+            color: #fff !important;
             text-decoration: none;
         }
 
@@ -163,6 +164,10 @@
             }
         }
 
+        .custom-margin {
+            margin-bottom: 500px;
+        }
+
     </style>
 
 </head>
@@ -173,7 +178,8 @@
 <!-- Jquery Js -->
 <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity=""
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <!-- Bootstrap Bundle Js -->

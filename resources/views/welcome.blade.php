@@ -392,109 +392,125 @@
 
         </div>
     </main>
-    <section class="bg-light py-5 feature-list border-bottom">
-        <div class="container py-4">
-            <div class="pb-2">
-                <h4 class="fw-bold text-black">@lang('crud.course.name')</h4>
-                <p class="mb-4 text-muted">@if($online->isNotEmpty())
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                                type="button" role="tab" aria-controls="home"
-                                aria-selected="true">@lang('crud.course.online')
-                        </button>
-                    </li>
-                @endif
-                @if($offline->isNotEmpty())
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                                type="button" role="tab" aria-controls="profile"
-                                aria-selected="false">@lang('crud.course.offline')
-                        </button>
-                    </li>
-                    @endif</p>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 g-4">
-                <!-- 1st mage -->
-                <div class="col">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
-                        <img src="img/communities/communities1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1 h6 text-dark">Veronica Cerna</h5>
-                            <p class="card-text text-muted">Lima District, Peru</p>
-                        </div>
-                        <div
-                            class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                            <p class="text-muted small mb-0">3512 followers</p>
-                            <button type="button" class="btn btn-secondary btn-sm px-2 py-0">+ Follow</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2nd image -->
-                <div class="col">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
-                        <img src="img/communities/communities2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1 h6 text-dark">Caro Bello</h5>
-                            <p class="card-text text-muted">Denver, Argentina</p>
-                        </div>
-                        <div
-                            class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                            <p class="text-muted small mb-0">35241 followers</p>
-                            <button type="button" class="btn btn-secondary btn-sm px-2 py-0">+ Follow</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 3rd image -->
-                <div class="col">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
-                        <img src="img/communities/communities3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1 h6 text-dark">Ernex</h5>
-                            <p class="card-text text-muted">Denpasar, Indonesia</p>
-                        </div>
-                        <div
-                            class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                            <p class="text-muted small mb-0">75 followers</p>
-                            <button type="button" class="btn btn-secondary btn-sm px-2 py-0">+ Follow</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4th image -->
-                <div class="col">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
-                        <img src="img/communities/communities4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1 h6 text-dark">Victoe Village</h5>
-                            <p class="card-text text-muted">Mexico City, Mexico</p>
-                        </div>
-                        <div
-                            class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                            <p class="text-muted small mb-0">10455 followers</p>
-                            <button type="button" class="btn btn-secondary btn-sm px-2 py-0">+ Follow</button>
-                        </div>
-                    </div>
-                </div>
 
-                 <!-- 4th image -->
-                <div class="col">
-                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
-                        <img src="img/communities/communities4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1 h6 text-dark">Victoe Village</h5>
-                            <p class="card-text text-muted">Mexico City, Mexico</p>
-                        </div>
-                        <div
-                            class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
-                            <p class="text-muted small mb-0">10455 followers</p>
-                            <button type="button" class="btn btn-secondary btn-sm px-2 py-0">+ Follow</button>
-                        </div>
-                    </div>
-                </div>
 
+    {{--    @if($online->isNotEmpty() || $offline->isNotEmpty())--}}
+    {{--        <div class="semister-fee pb--120 pb__md--80">--}}
+    {{--            <div class="container">--}}
+    {{--                <div class="row">--}}
+    {{--                    <div class="semister-fee__content">--}}
+    {{--                        <h5 class="rts-section-title">@lang('crud.course.name')</h5>--}}
+    {{--                        <!-- Tab Item -->--}}
+    {{--                        <div class="rts-fee-chart">--}}
+    {{--                            <div class="rts-fee-chart-tabs">--}}
+    {{--                                <ul class="nav nav-tabs" id="myTab" role="tablist">--}}
+    {{--                                    @if($online->isNotEmpty())--}}
+    {{--                                        <li class="nav-item" role="presentation">--}}
+    {{--                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"--}}
+    {{--                                                    data-bs-target="#home"--}}
+    {{--                                                    type="button" role="tab" aria-controls="home"--}}
+    {{--                                                    aria-selected="true">@lang('crud.course.online')--}}
+    {{--                                            </button>--}}
+    {{--                                        </li>--}}
+    {{--                                    @endif--}}
+    {{--                                    @if($offline->isNotEmpty())--}}
+    {{--                                        <li class="nav-item" role="presentation">--}}
+    {{--                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"--}}
+    {{--                                                    data-bs-target="#profile"--}}
+    {{--                                                    type="button" role="tab" aria-controls="profile"--}}
+    {{--                                                    aria-selected="false">@lang('crud.course.offline')--}}
+    {{--                                            </button>--}}
+    {{--                                        </li>--}}
+    {{--                                    @endif--}}
+    {{--                                </ul>--}}
+    {{--                                <div class="tab-content" id="myTabContent">--}}
+    {{--                                    @if($online->isNotEmpty())--}}
+    {{--                                        <div class="tab-pane fade show active" id="home" role="tabpanel"--}}
+    {{--                                             aria-labelledby="home-tab">--}}
+    {{--                                            <div class="rts-fee-chart-content">--}}
+    {{--                                                <ul>--}}
+    {{--                                                    @foreach($online as $on)--}}
+    {{--                                                        <li>--}}
+    {{--                                                            <a href="{{ route('course.show', $on->id) }}">--}}
+    {{--                                                                <span>{{ $on['title_'.session('locale')] ?? 'Default Online Course' }}</span>--}}
+    {{--                                                                <span>{{ $on->price ?? 'Free' }}</span>--}}
+    {{--                                                            </a>--}}
+    {{--                                                        </li>--}}
+    {{--                                                    @endforeach--}}
+    {{--                                                </ul>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    @endif--}}
+    {{--                                    @if($offline->isNotEmpty())--}}
+    {{--                                        <div class="tab-pane fade" id="profile" role="tabpanel"--}}
+    {{--                                             aria-labelledby="profile-tab">--}}
+    {{--                                            <div class="rts-fee-chart-content">--}}
+    {{--                                                <ul>--}}
+    {{--                                                    @foreach($offline as $off)--}}
+    {{--                                                        <li>--}}
+    {{--                                                            <a href="{{ route('course.show', $off->id) }}">--}}
+    {{--                                                                <span>{{ $off['title_'.session('locale')] ?? 'Default Offline Course' }}</span>--}}
+    {{--                                                                <span>{{ $off->price ?? 'Free' }}</span>--}}
+    {{--                                                            </a>--}}
+    {{--                                                        </li>--}}
+    {{--                                                    @endforeach--}}
+    {{--                                                </ul>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    @endif--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    @endif--}}
+
+    @if($courses->isNotEmpty())
+        <section class="bg-light py-5 feature-list border-bottom">
+            <div class="container py-4">
+                <div class="pb-2">
+                    <h4 class="fw-bold text-black">@lang('crud.course.name')</h4>
+
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 g-4">
+                    <!-- 1st mage -->
+
+                    @foreach($courses as $course)
+                        <div class="col">
+                            <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden video-card-item">
+                                {{--                                <img src="{{ asset('storage/courses/' . $course->image) }}" class="card-img-top" alt="Course">--}}
+                                <img src="{{ asset('assets/img/team/team1.jpg') }}" class="card-img-top" alt="Course">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1 h6 text-dark">
+                                        <a href="{{ route('course.show', $course->id) }}">
+                                            <span>{{ $course['title_'.session('locale')] ?? 'Default Offline Course' }}</span>
+
+                                        </a>
+                                    </h5>
+                                    <p class="card-text text-muted">{{ $course['description_'.session('locale')] ?? 'Default  description' }}</p>
+                                </div>
+                                <div
+                                    class="card-footer bg-white border-0 d-flex align-items-center justify-content-between p-3 border-top">
+                                    <p class="text-muted small mb-0"><span>{{ $course->price ?? 'Free' }}</span></p>
+                                    <button type="button"
+                                            class="btn btn-secondary btn-sm px-2 py-0">{{ $course->type ?? '' }}</button>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+                </div>
             </div>
-        </div>
-        </div>
-    </section>
+            </div>
+        </section>
+
+
+
+    @endif
+
     <!-- Refer and get free services -->
     <div class="bg-white border-top border-bottom cities-footer">
         <div>
@@ -514,91 +530,85 @@
         <div>
             <div class="container py-3">
                 <div class="row">
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <h6 class="mb-3 text-body fw-bold">COMPANY</h6>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="about.html">About</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">All
-                            Courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="careers.html">Careers</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="profile.html">Account</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
-                           href="testimonials.html">Testimonials</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="contact.html">Contact Us</a>
-                    </div>
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <h6 class="mb-3 text-body fw-bold">CATEGORIES</h6>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Illustration
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Craft
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Marketing &
-                            Business</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Photography &
-                            Video</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Design
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">3D &
-                            Animation</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Architecture &
-                            Spaces</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Web & App
-                            Design</a>
-                    </div>
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <h6 class="mb-3 text-body fw-bold">SOFTWARE</h6>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Adobe
-                            Photoshop</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Adobe
-                            Illustrator</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Adobe After
-                            Effects</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Procreate
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Cinema 4D
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Adobe
-                            Lightroom </a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Adobe
-                            InDesign </a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Camera
-                            Raw </a>
-                    </div>
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <h6 class="mb-3 text-body fw-bold">LISTS</h6>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">New
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Top rated</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Popular
-                            courses</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Courses on
-                            sale</a>
-                        <a class="py-1 text-decoration-none d-block w-100 text-muted" href="courses.html">Course
-                            Bundles</a>
-                    </div>
-                    <div class="col-6 col-lg-4 col-md-3 ps-lg-5">
-                        <a href="index-2.html"
-                           class="brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                            <img src="img/logo.png" class="img-fluid" alt="SIKSHAA">
+
+                    <div class="col-6 col-lg-2 col-md-3 ">
+                        <a href="/" class="py-1 text-decoration-none d-block w-100 text-muted">
+                            <img class="mb-3 text-body fw-bold" src="{{ asset('logo.png') }}" alt=""
+                                 width="200">
+
                         </a>
-                        <h6 class="mb-2 text-body mt-5 fw-bold text-uppercase">DOWNLOAD THE SIKSHAA APP</h6>
-                        <p>Get new clients, grow your business.</p>
-                        <a class="me-2" href="#"><img src="img/google.png" class="img-fluid app-icon" alt="#"
-                                                      loading="lazy"></a>
-                        <a href="#"><img src="img/apple.png" class="img-fluid app-icon" alt="#" loading="lazy"></a>
+                        <p>
+                            {{ $about['official_name_'.session('locale')] ?? 'Birlamchi rasmiy ism' }}
+                        </p>
+                        <div class="rts-contact-link">
+                            <a href="mailto:contact@reacthemes.com"><i
+                                    class="fa-sharp fa-light fa-location-dot"></i> {{ $about['address_'.session('locale')] ?? 'Standart manzil' }}
+                            </a>
+                            <br>
+                            <a class="" href="callto:+998 93 728 68 67"><i class="fa-thin fa-phone"></i> +998 93 728 68
+                                67</a>
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-lg-2 col-md-3  m-1"></div>
+
+                    <div class="col-6 col-lg-2 col-md-3 mt-5">
+                        <h6 class="mb-3 text-body fw-bold">
+                            @if (app()->getLocale() == 'uz')
+                                Menyu
+                            @elseif (app()->getLocale() == 'en')
+                                Menu
+                            @else
+                                Меню
+                            @endif
+                        </h6>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                           href="{{ route('about') }}">@lang('crud.menu.about')</a>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                           href="{{ route('news') }}">@lang('crud.menu.news')</a>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                           href="{{ route('startup') }}">@lang('crud.menu.start_up')</a>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                           href="{{ route('software') }}">@lang('crud.menu.software')</a>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted"
+                           href="{{ route('course') }}">@lang('crud.menu.course')</a>
+
+
+                        <a class="py-1 text-decoration-none d-block w-100 text-muted "
+                           href="{{ route('document') }}">@lang('crud.menu.document')</a>
+
+
+                    </div>
+
+
+                    <div class="col-6 col-lg-4 col-md-3 ps-lg-5 mt-5">
+                        <div class="rts-footer-widget ml--30">
+                            <iframe height="300"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9320.458032388887!2d66.9694552!3d39.6383979!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d1f8bc8499255%3A0x7d89646ab179a0fe!2sSamarqand%20Davlat%20Universiteti%20IT%20Markazi!5e0!3m2!1sen!2s!4v1662635733627!5m2!1sen!2s">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
     <div class="py-4 bg-white footer-copyright">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <span class="me-3 small">©2022 <b class="text-primary">sikshaa</b>. All rights reserved</span>
-                    <a class="text-black-50 small mx-3 text-decoration-none" href="terms-and-conditions.html">Terms of
-                        use</a>
-                    <a class="text-black-50 small mx-3 text-decoration-none" href="privacy-policy.html">Privacy
-                        policy</a>
+                    <span class="me-3 small">©{{ \Carbon\Carbon::now()->year }}
+                    <b class="text-primary"><a href="/">IT-CENTER</a></b>. All rights reserved</span>
                 </div>
                 <div class="col-md-4 text-end">
                     <a target="_blank" href="#" class="btn social-btn btn-sm text-decoration-none"><i

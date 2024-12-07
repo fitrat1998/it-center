@@ -49,6 +49,33 @@
                         </a>
                     </li>
 
+                    <li class="nav-item mx-2 dropdown m-1">
+                        <a class="nav-link dropdown-toggle px-0 py-4" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            @if (app()->getLocale() == 'uz')
+                                Til {{ $currentLocale = session('locale') ?? "uz"; }}
+                            @elseif (app()->getLocale() == 'en')
+                                Language
+                            @else
+                                Язык
+                            @endif
+
+                </a>
+                <ul class="dropdown-menu m-0 border-0 shadow-sm p-2">
+                    <li><a class="dropdown-item px-3 py-2 rounded" href="courses.html">
+                            @php
+                                $currentLocale = session('locale') ?? "uz";
+                                $languages = [
+                                    'en' => ['name' => 'English', 'flag' => 'flag-en.png'],
+                                    'uz' => ['name' => "O'zbek", 'flag' => 'flag-uz.png'],
+                                    'ru' => ['name' => 'Русский', 'flag' => 'flag-ru.png'],
+                                ];
+                            @endphp
+                        </a></li>
+
+                </ul>
+                </li>
+
                 </ul>
                 {{--                <div class="d-flex gap-4 align-items-center">--}}
                 {{--                    <a href="signin.html" class="text-decoration-none text-black fw-bold">Log In</a>--}}
@@ -393,79 +420,7 @@
         </div>
     </main>
 
-
-    {{--    @if($online->isNotEmpty() || $offline->isNotEmpty())--}}
-    {{--        <div class="semister-fee pb--120 pb__md--80">--}}
-    {{--            <div class="container">--}}
-    {{--                <div class="row">--}}
-    {{--                    <div class="semister-fee__content">--}}
-    {{--                        <h5 class="rts-section-title">@lang('crud.course.name')</h5>--}}
-    {{--                        <!-- Tab Item -->--}}
-    {{--                        <div class="rts-fee-chart">--}}
-    {{--                            <div class="rts-fee-chart-tabs">--}}
-    {{--                                <ul class="nav nav-tabs" id="myTab" role="tablist">--}}
-    {{--                                    @if($online->isNotEmpty())--}}
-    {{--                                        <li class="nav-item" role="presentation">--}}
-    {{--                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"--}}
-    {{--                                                    data-bs-target="#home"--}}
-    {{--                                                    type="button" role="tab" aria-controls="home"--}}
-    {{--                                                    aria-selected="true">@lang('crud.course.online')--}}
-    {{--                                            </button>--}}
-    {{--                                        </li>--}}
-    {{--                                    @endif--}}
-    {{--                                    @if($offline->isNotEmpty())--}}
-    {{--                                        <li class="nav-item" role="presentation">--}}
-    {{--                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"--}}
-    {{--                                                    data-bs-target="#profile"--}}
-    {{--                                                    type="button" role="tab" aria-controls="profile"--}}
-    {{--                                                    aria-selected="false">@lang('crud.course.offline')--}}
-    {{--                                            </button>--}}
-    {{--                                        </li>--}}
-    {{--                                    @endif--}}
-    {{--                                </ul>--}}
-    {{--                                <div class="tab-content" id="myTabContent">--}}
-    {{--                                    @if($online->isNotEmpty())--}}
-    {{--                                        <div class="tab-pane fade show active" id="home" role="tabpanel"--}}
-    {{--                                             aria-labelledby="home-tab">--}}
-    {{--                                            <div class="rts-fee-chart-content">--}}
-    {{--                                                <ul>--}}
-    {{--                                                    @foreach($online as $on)--}}
-    {{--                                                        <li>--}}
-    {{--                                                            <a href="{{ route('course.show', $on->id) }}">--}}
-    {{--                                                                <span>{{ $on['title_'.session('locale')] ?? 'Default Online Course' }}</span>--}}
-    {{--                                                                <span>{{ $on->price ?? 'Free' }}</span>--}}
-    {{--                                                            </a>--}}
-    {{--                                                        </li>--}}
-    {{--                                                    @endforeach--}}
-    {{--                                                </ul>--}}
-    {{--                                            </div>--}}
-    {{--                                        </div>--}}
-    {{--                                    @endif--}}
-    {{--                                    @if($offline->isNotEmpty())--}}
-    {{--                                        <div class="tab-pane fade" id="profile" role="tabpanel"--}}
-    {{--                                             aria-labelledby="profile-tab">--}}
-    {{--                                            <div class="rts-fee-chart-content">--}}
-    {{--                                                <ul>--}}
-    {{--                                                    @foreach($offline as $off)--}}
-    {{--                                                        <li>--}}
-    {{--                                                            <a href="{{ route('course.show', $off->id) }}">--}}
-    {{--                                                                <span>{{ $off['title_'.session('locale')] ?? 'Default Offline Course' }}</span>--}}
-    {{--                                                                <span>{{ $off->price ?? 'Free' }}</span>--}}
-    {{--                                                            </a>--}}
-    {{--                                                        </li>--}}
-    {{--                                                    @endforeach--}}
-    {{--                                                </ul>--}}
-    {{--                                            </div>--}}
-    {{--                                        </div>--}}
-    {{--                                    @endif--}}
-    {{--                                </div>--}}
-    {{--                            </div>--}}
-    {{--                        </div>--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    @endif--}}
+    <div class="m-3 bg-white py-3"></div>
 
     @if($courses->isNotEmpty())
         <section class="bg-light py-5 feature-list border-bottom">
